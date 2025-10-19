@@ -6,7 +6,7 @@ interface OrderOnlineProps {
 export default function OrderOnline({  }: OrderOnlineProps) {
     return (
         <div>
-            Hello!
+            Hello Order Online!
         </div>
     );
 };

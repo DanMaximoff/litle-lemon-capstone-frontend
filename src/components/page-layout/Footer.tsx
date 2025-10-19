@@ -6,7 +6,7 @@ interface FooterProps {
 export default function Footer({  }: FooterProps) {
     return (
         <div>
-            Hello!
+            Hello Footer!
         </div>
     );
 };
