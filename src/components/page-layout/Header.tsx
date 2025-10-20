@@ -1,3 +1,11 @@
+import { routes } from '../../utils/routes';
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.png';
+
+
+
+import './header.css';
+
 
 interface HeaderProps {
     
@@ -5,20 +13,33 @@ interface HeaderProps {
 
 export default function Header({  }: HeaderProps) {
     return (
-        <header className="header">
-            <nav className="nav">
-                <div className="logo">
-                    <a href="/">Little Lemon</a>
-                </div>
-                <ul className="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/menu">Menu</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/reservations">Reservations</a></li>
-                    <li><a href="/order">Order Online</a></li>
-                    <li><a href="/login">Login</a></li>
+        <header className='header-container'>
+            <div>
+                <Link to='/'>
+                    <img className='logo' src={Logo} alt='Little Lemon logo' />
+                </Link>
+            </div>
+            <nav>
+                <ul className='navbar'>
+                {routes.map((route) => {
+                    const { href, title } = route;
+                    return (
+                    <li
+                        key={route.title}
+                        className=''
+                    >
+                        <a
+                        href={href}
+                        className=''
+                        >
+                        {title}
+                        </a>
+                    </li>
+                    );
+                })}
                 </ul>
             </nav>
         </header>
+        
     );
 };
