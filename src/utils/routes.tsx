@@ -22,11 +22,11 @@ export const routes: Route[] = [
       href: '/reservations',
     },
     {
-        title: 'Order Online',
-        href: '/order',
-      },
-      {
-        title: 'Login',
-        href: '/login',
-      },
+      title: 'Order Online',
+      href: '/order',
+    },
+    {
+      title: 'Login',
+      href: '/login',
+    },
   ];
