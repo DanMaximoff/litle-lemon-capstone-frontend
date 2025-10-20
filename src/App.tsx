@@ -8,6 +8,7 @@ import Menu from './components/pages/menu/Menu'
 import Reservations from './components/pages/reservations/Reservations'
 import OrderOnline from './components/pages/order-online/OrderOnline'
 import Login from './components/pages/login/Login'
+import ReservationConfirm from './components/pages/reservations/reservationConfirm';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <>
       <Header />
         <Routes>
+          <Route path="/confirmation" element={<ReservationConfirm />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />

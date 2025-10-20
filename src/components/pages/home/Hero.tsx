@@ -11,7 +11,7 @@ interface HeroProps {
 export default function Hero({  }: HeroProps) {
 
     const handleClick = () => {
-        console.log('Button was clicked!');
+        console.log('Button works!');
     };
 
     return (
